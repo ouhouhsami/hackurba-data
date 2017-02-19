@@ -1,0 +1,6 @@
+# #HackUrba - Référentiel des jeux de données pour le hackathon "Comment et où construire durablement ?"
+
+cvstojson to generate json from cvs.
+
+# TODO
+- Prise en charge des retours à la ligne dans les commentaires
