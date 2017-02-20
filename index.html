@@ -18,7 +18,7 @@
     <div class="row ui conteneurblue">
       <div class="two wide column"><img class="ui image" src="assets/img/logo_ministere.png" alt="Logo Ministère"></div>
       <div class="two wide column"><img class="ui image" src="assets/img/logo_gtv.png" alt="Logo GreenTech verte" height="75" width="75"></div>
-      <div class="eleven wide column titre centered">#HackUrba : Comment et où construire durablement ?</div>
+      <div class="eleven wide column titre centered">#HackUrba : Comment et où construire durablement ? <br /> Un événement #GreenTechverte</div>
     </div>
     <div class="row container">
       <div class="four wide column center aligned">
@@ -58,70 +58,47 @@
         <div class="column"> 
           <div class="ui segments">
             <div class="ui segment">
-              <p>Partenaire : <%= Opérateur %></p>
-            </div>
-            <div class="ui segment">
-              <div class="ui labels"> Thèmes :
+              <p>Proposé par : <%= Opérateur %></p>
+              <p>Périmètre : <%= Perimetre %></p>
+              <p><div class="ui labels"> Thèmes :
                 <% var mywords=Theme.split(';') ; for (index=0;index<mywords.length;++index) { %>
-                <a class="ui label" href="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
+                <a class="label" href="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
                 <% } %>
-              </div>
-            </div>
-            <div class="ui segment">
-              <p><%= Nature %> | <%= Perimetre %></p>
-            </div>
-            <div class="ui segment">
+              </div></p>
               <p>Couverture géo : <%= ChampGéographique %></p>
-            </div>
-            <div class="ui segment">
-              <p><%= NiveauRestitution %></p>
-            </div>
-              <div class="ui segment">
-                <div class="ui labels">
+              <p>Mots-clefs : <div class="ui labels">
                   <% var mywords=MotsClefs.split(';') ; for (index=0;index<mywords.length;++index) { %>
                   <a class="ui label" href="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
                   <% } %>
-                </div>
-              </div>
+                </div></p>
+            </div>
           </div>
         </div>
         <div class="column">
           <div class="ui segments">
             <div class="ui segment">
-              <p>Disponibilité des données : <%= DisponibilitéDonnées %>
+                <p>Disponibilité des données : <%= DisponibilitéDonnées %>
                 <% if (DisponibilitéDonnées=='oui') { %>
-                <a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download icon"></i>Télécharger</a></p>
-                <% } %>
-              </div>
-            <div class="ui segment">
-              <% if(NombreJeuxDonnées) { %><p>Nb de jeux : <%= NombreJeuxDonnées %></p><% } %>
-              <% if(Millésimes) { %><p>Années : <%= Millésimes %></p><% } %>
-            </div>
-              <div class="ui segment">
-                <p><%= CGU %></p>
-              </div>
-              <div class="ui segment">
+                <a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download icon"></i>Télécharger</a>
+                <% } %></p>
+                <% if(NombreJeuxDonnées) { %><p>Nb de jeux : <%= NombreJeuxDonnées %></p><% } %>
+                <% if(Millésimes) { %><p>Années : <%= Millésimes %></p><% } %>
+                <p>Conditions d'usage : <%= CGU %></p>
                 <p>Doc. méthodologique : <%= DocumentationMéthodologique %></p>
                 <p>Doc. technique : <%= DocumentationTechnique %></p>
-              </div>
-              <div class="ui segment">
-                <div class="ui labels">
+                <p><div class="ui labels">
                   <% var mywords=Format.split(';') ; if (mywords.length > 1) { %>
                   Formats : <% for (index=0;index<mywords.length;++index) { %>
                   <a class="ui label" href="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
-                  <% }} %>
-                </div>
-              </div>
+                  <% }} else { %>
+                  Format non précisé
+                  <% } %></div></p>
+                  <% if(ExempleRéutilisation) { %><p>Exemple d'utilisation des données : <a class="ui label orange" href="<%= ExempleRéutilisation %>"><i class="idea icon"></i></a></p><% } %>
             </div>
           </div>
         </div>
-        <% if(ExempleRéutilisation) { %>
         <div class="ui container">
-          <p class="ui tag label"><i class="idea icon"></i>Exemple</p> <%= linkify(ExempleRéutilisation) %>
-        </div>
-        <% } %>
-        <div class="ui container">
-          <%= linkify(Commentaire).replace(/\n/g, "<br />")   %>
+          <p><%= linkify(Commentaire).replace(/\n/g, "<br />")   %></p><br />
         </div>
       </div>
     </script>
