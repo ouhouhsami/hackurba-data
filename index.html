@@ -78,7 +78,7 @@
           <div class="ui segments">
             <div class="ui segment">
                 <p>Disponibilité des données : <%= DisponibilitéDonnées %>
-                <% if (DisponibilitéDonnées=='oui') { %>
+                <% if (DisponibilitéDonnées=='oui' && Lien.length > 0) { %>
                 <a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download icon"></i>Télécharger</a>
                 <% } %></p>
                 <% if(NombreJeuxDonnées) { %><p>Nb de jeux : <%= NombreJeuxDonnées %></p><% } %>
