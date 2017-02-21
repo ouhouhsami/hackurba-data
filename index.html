@@ -60,17 +60,17 @@
             <div class="ui segment">
               <p>Proposé par : <%= Opérateur %></p>
               <p>Périmètre : <%= Perimetre %></p>
-              <p><div class="ui labels"> Thèmes :
+              <p><div class="ui horizontal labels"> Thèmes :
                 <% var mywords=Theme.split(';') ; for (index=0;index<mywords.length;++index) { %>
-                <a class="label" href="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
+                <a class="ui label" href="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
                 <% } %>
               </div></p>
-              <p>Couverture géo : <%= ChampGéographique %></p>
-              <p>Mots-clefs : <div class="ui labels">
+              <p><div class="ui horizontal labels">Mots-clefs : 
                   <% var mywords=MotsClefs.split(';') ; for (index=0;index<mywords.length;++index) { %>
                   <a class="ui label" href="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
                   <% } %>
                 </div></p>
+              <% if(ExempleRéutilisation) { %><p>Exemple d'utilisation des données : <a href="<%= ExempleRéutilisation %>"><i class="external icon"></i></a></p><% } %>
             </div>
           </div>
         </div>
@@ -79,13 +79,13 @@
             <div class="ui segment">
                 <p>Disponibilité des données : <%= DisponibilitéDonnées %>
                 <% if (DisponibilitéDonnées=='oui' && Lien.length > 0) { %>
-                <a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download icon"></i>Télécharger</a>
+                <a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download orange icon"></i>Télécharger</a>
                 <% } %></p>
                 <% if(NombreJeuxDonnées) { %><p>Nb de jeux : <%= NombreJeuxDonnées %></p><% } %>
                 <% if(Millésimes) { %><p>Années : <%= Millésimes %></p><% } %>
                 <p>Conditions d'usage : <%= CGU %></p>
-                <p>Doc. méthodologique : <%= DocumentationMéthodologique %></p>
-                <p>Doc. technique : <%= DocumentationTechnique %></p>
+                <% if(DocumentationMéthodologique) { %><p>Doc. méthodologique : <%= linkify(DocumentationMéthodologique) %></p><% } %>
+                <% if(DocumentationTechnique) { %><p>Doc. technique : <%= linkify(DocumentationTechnique) %></p><% } %>
                 <p><div class="ui labels">
                   <% var mywords=Format.split(';') ; if (mywords.length > 1) { %>
                   Formats : <% for (index=0;index<mywords.length;++index) { %>
@@ -93,7 +93,7 @@
                   <% }} else { %>
                   Format non précisé
                   <% } %></div></p>
-                  <% if(ExempleRéutilisation) { %><p>Exemple d'utilisation des données : <a class="ui label orange" href="<%= ExempleRéutilisation %>"><i class="idea icon"></i></a></p><% } %>
+                <p>Couverture géo : <%= ChampGéographique %></p>
             </div>
           </div>
         </div>
