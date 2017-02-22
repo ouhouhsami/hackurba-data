@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
   })
 
-  console.log(filteringData)
+  //console.log(filteringData)
 
   var template = $('#template').html();
   Mustache.parse(template);   // optional, speeds up future uses
@@ -68,6 +68,7 @@ function initSliders(){
 }
 
 function linkify(inputText) {
+  //console.log(inputText)
     var replacedText, replacePattern1, replacePattern2, replacePattern3;
 
     //URLs starting with http://, https://, or ftp://
@@ -81,6 +82,9 @@ function linkify(inputText) {
     //Change email addresses to mailto:: links.
     replacePattern3 = /(([a-zA-Z0-9\-\_\.])+@[a-zA-Z\_]+?(\.[a-zA-Z]{2,6})+)/gim;
     replacedText = replacedText.replace(replacePattern3, '<a href="mailto:$1">$1</a>');
+
+    replacedText = replacedText.replace(new RegExp('\r?\n','g'), '<br />');
+
 
     return replacedText;
 }
