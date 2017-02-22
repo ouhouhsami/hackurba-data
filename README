@@ -4,4 +4,4 @@ cvstojson to generate json from cvs.
 
 # TODO
 - Prise en charge des retours à la ligne dans les commentaires
-- Tri des listes automatiques pour filtrer les jeux de données
+- Affichage trié des items de listes pour filtrer les jeux de données
