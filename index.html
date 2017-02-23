@@ -19,7 +19,7 @@
     <div class="row ui conteneurblue">
       <div class="two wide column"><img class="ui image" src="assets/img/logo_ministere.png" alt="Logo Ministère"></div>
       <div class="two wide column"><img class="ui image" src="assets/img/logo_gtv.png" alt="Logo GreenTech verte" height="75" width="75"></div>
-      <div class="eleven wide column titre centered"><div class="ui blue horizontal label massive">#HackUrba</div> Comment et où construire durablement ? <br /> Un événement #GreenTechverte</div>
+      <div class="eleven wide column titre centered"><div class="ui blue horizontal label massive">#HackUrba</div> Comment et où construire durablement ? <br /><a class="ui green right floated button tiny" href="https://twitter.com/GreenTechverte?lang=fr" target="_blank"><i class="twitter icon"></i>#GreenTechverte</a></div>
     </div>
     <div class="row container">
       <div class="four wide column center aligned">
@@ -56,8 +56,10 @@
 
   <script id="data-template" type="text/html">
     <div class="ui raised segment">
-      <p class="ui blue ribbon label"><%= Acronyme %></p><%= Intitulé %><% if (DisponibilitéDonnées=='oui' && Lien.length > 0) { %>
-                <button class="ui right floated button tiny"><a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download orange icon"></i>Télécharger</a></button><% } %>
+      <p class="ui blue ribbon label"><%= Acronyme %></p><%= Intitulé %>
+      <% if (DisponibilitéDonnées=='oui' && Lien.length > 0) { %>
+                <button class="ui right floated button tiny"><a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download orange icon"></i>Télécharger</a></button>
+      <% } %>
       <p></p>
       <div class="ui two column grid">
         <div class="column"> 
@@ -149,7 +151,7 @@
 
   <div class="well">
     <fieldset id="champGéographique_criteria">
-      <legend>     géographique</legend>
+      <legend>Zone géographique</legend>
       {{#ChampGéographique}}{{#.}}
       <div id="champGéographique">
         <div class="radio" fjs-criteria="field=ChampGéographique,ele=#champGéographiques input:radio">
