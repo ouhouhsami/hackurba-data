@@ -7,7 +7,7 @@ var mydata = [{
     "Opérateur": "DGALN",
     "Intitulé": "GéoPortail de l'Urbanisme",
     "Nouveaute": "non",
-    "Commentaire": "Le GéoPortail de l’Urbanisme (GPU) est le fruit d’un partenariat entre le Ministère du Logement et de l'Habitat Durable (MLHD) et l’Institut national de l’information géographique et forestière (IGN).\n\nLe GPU vise à offrir à terme un panorama complet des informations urbanistiques utiles aux citoyens  comme aux professionnels, aux administrations comme aux particuliers. \n\nIls pourront y trouver l’ensemble des documents d’urbanisme (schéma de cohérence territoriale, plan local d’urbanisme, carte communale, etc.) et servitudes d’utilité publique (SUP) en vigueur sur le territoire.\n\nLa liste des documents disponibles sur le GéoPortail peut être consulté ici : http://www.donnees.statistiques.developpement-durable.gouv.fr/hackurba/GPU_liste_documents présents.csv",
+    "Commentaire": "Le GéoPortail de l’Urbanisme (GPU) est le fruit d’un partenariat entre le Ministère du Logement et de l'Habitat Durable (MLHD) et l’Institut national de l’information géographique et forestière (IGN).\n\nLe GPU vise à offrir à terme un panorama complet des informations urbanistiques utiles aux citoyens  comme aux professionnels, aux administrations comme aux particuliers. \n\nIls pourront y trouver l’ensemble des documents d’urbanisme (schéma de cohérence territoriale, plan local d’urbanisme, carte communale, etc.) et servitudes d’utilité publique (SUP) en vigueur sur le territoire.\n\nLa liste des documents disponibles sur le GéoPortail peut être consulté ici : http://www.donnees.statistiques.developpement-durable.gouv.fr/hackurba/GPU_liste_documents%20présents.csv",
     "MotsClefs": "urbanisme ; portail ; servitude ; schéma ; PLU ; plan local d'urbanisme ; SUP ; servitude d'utilité publique",
     "Lien": "https://www.geoportail-urbanisme.gouv.fr",
     "DisponibilitéDonnées": "oui",
@@ -119,6 +119,54 @@ var mydata = [{
     "Millésimes": 2015
   },
   {
+    "#": 8,
+    "Perimetre": "Propriétés",
+    "Nature": "Données de référence",
+    "Theme": "Foncier",
+    "Acronyme": "PCI",
+    "Opérateur": "DREAL Pays de la Loire",
+    "Intitulé": "Données issues du PCI regroupant les parcelles détenues par un même propriétaire",
+    "Nouveaute": "non",
+    "Commentaire": "Cette donnée est constituée par le CEREMA Nord-Picardie à l'occasion des livraison des fichier fonciers et peut être obtenu à partir du module cadastre d'intégration du PCI et des fichiers MAJIC.",
+    "MotsClefs": "foncier, ADS",
+    "Lien": "données sensibles car non anonimisées",
+    "DisponibilitéDonnées": "oui",
+    "CGU": "Licence d'utilisation préalable",
+    "DocumentationTechnique": "Voir CEREMA NP",
+    "DocumentationMéthodologique": "Voir CEREMA NP",
+    "ExempleRéutilisation": "",
+    "ChampGéographique": "France entière",
+    "Maille": "cadastrale",
+    "NiveauRestitution": "",
+    "Format": "SHP",
+    "NombreJeuxDonnées": "",
+    "Millésimes": 2015
+  },
+  {
+    "#": 9,
+    "Perimetre": "Contraintes physiques",
+    "Nature": "Données de référence",
+    "Theme": "sol",
+    "Acronyme": "OCSGE",
+    "Opérateur": "GEOPAL (DREAL PDL)",
+    "Intitulé": "Occupation des sols à grande échelle",
+    "Nouveaute": "oui",
+    "Commentaire": "La BD OCSGE est une base de données vectorielle pour la description de l’occupation du sol de l’ensemble du territoire métropolitain et des départements d’outre-mer. Elle est un référentiel national, constituant un socle, utilisable au niveau national et au niveau local. Elle contribue aux calculs d’indicateurs demandés par les documents d’urbanisme (PLU, SCoT). Elle est également compatible (tant que faire se peut) avec les couches d’occupation du sol existantes. Elle s’appuie sur un modèle ouvert séparant la couverture du sol et l’usage du sol (appelé modèle en 2 dimensions) avec une précision appuyée sur le Référentiel à grande échelle (RGE®) et une cohérence temporelle (notion de millésime) permettant les mises à jour pour suivre les évolutions de la consommation des espaces.\n\nCe jeu de données concerne la Sarthe, la Mayenne et le Maine-et-Loire.",
+    "MotsClefs": "usage des sols ; couverture des sols",
+    "Lien": "http://www.geopal.org/accueil/acces_aux_donnees/geoservice?uuid=d254cc25-e547-4981-96e5-7674be280202&bSearch=1",
+    "DisponibilitéDonnées": "oui",
+    "CGU": "Licence ouverte / Open Data Commons Open Database License (ODbL)",
+    "DocumentationTechnique": "oui sur le site de l'IGN",
+    "DocumentationMéthodologique": "",
+    "ExempleRéutilisation": "",
+    "ChampGéographique": "Département",
+    "Maille": "détail",
+    "NiveauRestitution": "",
+    "Format": "WFS ; WMS ; SHP",
+    "NombreJeuxDonnées": 3,
+    "Millésimes": 2013
+  },
+  {
     "#": 10,
     "Perimetre": "Propriétés",
     "Nature": "Données de référence",
@@ -127,9 +175,9 @@ var mydata = [{
     "Opérateur": "DDTM 35",
     "Intitulé": "Potentialités foncières",
     "Nouveaute": "oui",
-    "Commentaire": "Ce jeu de données, constitué par la DDTM 35, croise les zonages des PLU et le cadastre / fichiers fonciers (unités foncières + bâtis). La couche identifie les unités foncières potentielles disponibles pour l'urbanisation (unités foncières non construites en zones U et AU) et peu denses (unités foncières de plus de 600 m² dont le bâti occupe moins de 10% de la surface en zones U et AU).\n\nCe jeu de données concerne l'Ille-et-Vilaine.",
+    "Commentaire": "Ce jeu de données, constitué par la DDTM 35, croise les zonages des PLU et le cadastre / fichiers fonciers (unités foncières + bâtis). La couche identifie les unités foncières potentielles disponibles pour l'urbanisation (unités foncières non construites en zones U et AU) et peu denses (unités foncières de plus de 600 m² dont le bâti occupe moins de 10% de la surface en zones U et AU).\n\nCe jeu de données concerne deux villes : Rennes Métropole et la Communauté de communes du Val d'Ille-Aubigné.",
     "MotsClefs": "foncier ; potentialité",
-    "Lien": "",
+    "Lien": "http://www.donnees.statistiques.developpement-durable.gouv.fr/hackurba/DDTM35_potfonc.zip",
     "DisponibilitéDonnées": "",
     "CGU": "",
     "DocumentationTechnique": "",
@@ -480,30 +528,6 @@ var mydata = [{
   },
   {
     "#": 25,
-    "Perimetre": "Réglementaires",
-    "Nature": "Données de référence",
-    "Theme": "PLU",
-    "Acronyme": "BDPLU",
-    "Opérateur": "DRIEA",
-    "Intitulé": "Base de données des plans locaux d'urbanisme",
-    "Nouveaute": "",
-    "Commentaire": "",
-    "MotsClefs": "plan ; urbanisme",
-    "Lien": "",
-    "DisponibilitéDonnées": "",
-    "CGU": "",
-    "DocumentationTechnique": "",
-    "DocumentationMéthodologique": "",
-    "ExempleRéutilisation": "",
-    "ChampGéographique": "",
-    "Maille": "",
-    "NiveauRestitution": "",
-    "Format": "",
-    "NombreJeuxDonnées": "",
-    "Millésimes": ""
-  },
-  {
-    "#": 26,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -527,7 +551,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 27,
+    "#": 26,
     "Perimetre": "Qualité de vie et confort",
     "Nature": "Données de référence",
     "Theme": "Climat",
@@ -551,7 +575,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 28,
+    "#": 27,
     "Perimetre": "Propriétés",
     "Nature": "Données de référence",
     "Theme": "Adresse",
@@ -575,7 +599,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 29,
+    "#": 28,
     "Perimetre": "Qualité de vie et confort",
     "Nature": "Données de référence",
     "Theme": "Pollution",
@@ -599,7 +623,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 30,
+    "#": 29,
     "Perimetre": "Propriétés",
     "Nature": "Données de référence",
     "Theme": "Bâtiment",
@@ -623,7 +647,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 31,
+    "#": 30,
     "Perimetre": "Qualité de vie et confort",
     "Nature": "Données de référence",
     "Theme": "Pollution",
@@ -647,7 +671,7 @@ var mydata = [{
     "Millésimes": "2003 à 2014"
   },
   {
-    "#": 33,
+    "#": 32,
     "Perimetre": "Propriétés",
     "Nature": "Données de référence",
     "Theme": "Population",
@@ -671,7 +695,7 @@ var mydata = [{
     "Millésimes": 2010
   },
   {
-    "#": 34,
+    "#": 33,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -695,7 +719,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 35,
+    "#": 34,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -719,7 +743,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 36,
+    "#": 35,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -743,7 +767,7 @@ var mydata = [{
     "Millésimes": "Depuis 1945"
   },
   {
-    "#": 37,
+    "#": 36,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -767,7 +791,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 38,
+    "#": 37,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -791,7 +815,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 39,
+    "#": 38,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -815,7 +839,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 40,
+    "#": 39,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -839,7 +863,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 41,
+    "#": 40,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -863,7 +887,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 42,
+    "#": 41,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -887,7 +911,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 43,
+    "#": 42,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographie",
@@ -911,7 +935,7 @@ var mydata = [{
     "Millésimes": ""
   },
   {
-    "#": 44,
+    "#": 43,
     "Perimetre": "Qualité de vie et confort",
     "Nature": "Données de référence",
     "Theme": "météo",
@@ -935,7 +959,7 @@ var mydata = [{
     "Millésimes": 2012
   },
   {
-    "#": 45,
+    "#": 44,
     "Perimetre": "Qualité de vie et confort",
     "Nature": "Données de référence",
     "Theme": "performance énergétique",
@@ -959,7 +983,7 @@ var mydata = [{
     "Millésimes": 2015
   },
   {
-    "#": 46,
+    "#": 45,
     "Perimetre": "Qualité de vie et confort",
     "Nature": "Données de référence",
     "Theme": "déplacement ; vélo",
@@ -983,7 +1007,7 @@ var mydata = [{
     "Millésimes": 2015
   },
   {
-    "#": 47,
+    "#": 46,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographique",
@@ -994,7 +1018,31 @@ var mydata = [{
     "Commentaire": "base de données 3D de la volumétrie des bâtiments associée à un MNT très précis",
     "MotsClefs": "Batiment 3D MNT",
     "Lien": "",
-    "DisponibilitéDonnées": "",
+    "DisponibilitéDonnées": "oui",
+    "CGU": "Licence d'utilisation préalable",
+    "DocumentationTechnique": "",
+    "DocumentationMéthodologique": "",
+    "ExempleRéutilisation": "",
+    "ChampGéographique": "",
+    "Maille": "",
+    "NiveauRestitution": "",
+    "Format": "",
+    "NombreJeuxDonnées": "",
+    "Millésimes": ""
+  },
+  {
+    "#": 47,
+    "Perimetre": "Contraintes physiques",
+    "Nature": "Données de référence",
+    "Theme": "Géographique",
+    "Acronyme": "BD TOPAGE",
+    "Opérateur": "IGN",
+    "Intitulé": "référentiel hydrographique à grande échelle",
+    "Nouveaute": "oui",
+    "Commentaire": "Constitué à partir du thème Hydrographique de la BD TOPO®, exhaustif,\nconforme à la directive INSPIRE et compatible avec le RGE®, il vise à répondre\nà l’ensemble des acteurs du système d’information sur l’eau : services de\nl’Etat, collectivités, syndicats de communes, syndicats de rivières, agences et\noffices de l’eau, établissements publics territoriaux de bassins…",
+    "MotsClefs": "hydro ; sol ; RGE",
+    "Lien": "",
+    "DisponibilitéDonnées": "oui",
     "CGU": "Licence d'utilisation préalable",
     "DocumentationTechnique": "",
     "DocumentationMéthodologique": "",
@@ -1008,30 +1056,6 @@ var mydata = [{
   },
   {
     "#": 48,
-    "Perimetre": "Contraintes physiques",
-    "Nature": "Données de référence",
-    "Theme": "Géographique",
-    "Acronyme": "BD TOPAGE",
-    "Opérateur": "IGN",
-    "Intitulé": "référentiel hydrographique à grande échelle",
-    "Nouveaute": "oui",
-    "Commentaire": "Constitué à partir du thème Hydrographique de la BD TOPO®, exhaustif,\nconforme à la directive INSPIRE et compatible avec le RGE®, il vise à répondre\nà l’ensemble des acteurs du système d’information sur l’eau : services de\nl’Etat, collectivités, syndicats de communes, syndicats de rivières, agences et\noffices de l’eau, établissements publics territoriaux de bassins…",
-    "MotsClefs": "hydro ; sol ; RGE",
-    "Lien": "",
-    "DisponibilitéDonnées": "",
-    "CGU": "",
-    "DocumentationTechnique": "",
-    "DocumentationMéthodologique": "",
-    "ExempleRéutilisation": "",
-    "ChampGéographique": "",
-    "Maille": "",
-    "NiveauRestitution": "",
-    "Format": "",
-    "NombreJeuxDonnées": "",
-    "Millésimes": ""
-  },
-  {
-    "#": 49,
     "Perimetre": "Contraintes physiques",
     "Nature": "Données de référence",
     "Theme": "Géographique",
@@ -1053,5 +1077,53 @@ var mydata = [{
     "Format": "",
     "NombreJeuxDonnées": "",
     "Millésimes": ""
+  },
+  {
+    "#": 49,
+    "Perimetre": "Réglementaires",
+    "Nature": "Données de référence",
+    "Theme": "PLU",
+    "Acronyme": "CartoBDPLU+",
+    "Opérateur": "DRIEA",
+    "Intitulé": "",
+    "Nouveaute": "oui",
+    "Commentaire": "Ce jeu de données concerne la Seine-Saint-Denis.",
+    "MotsClefs": "carto ; PLU ; sol",
+    "Lien": "http://www.donnees.statistiques.developpement-durable.gouv.fr/hackurba/DRIEA_CartoPLU_d93.zip",
+    "DisponibilitéDonnées": "oui",
+    "CGU": "Licence ouverte / Open Data Commons Open Database License (ODbL)",
+    "DocumentationTechnique": "",
+    "DocumentationMéthodologique": "",
+    "ExempleRéutilisation": "",
+    "ChampGéographique": "Département",
+    "Maille": "",
+    "NiveauRestitution": "",
+    "Format": "",
+    "NombreJeuxDonnées": 1,
+    "Millésimes": 2015
+  },
+  {
+    "#": 50,
+    "Perimetre": "Réglementaires",
+    "Nature": "Données de référence",
+    "Theme": "construstibilité",
+    "Acronyme": "Constructibilité potentielle",
+    "Opérateur": "DRIEA",
+    "Intitulé": "",
+    "Nouveaute": "oui",
+    "Commentaire": "La base sur la constructibilité potentielle indique pour chaque parcelle (utilisation des fichiers fonciers 2014 pour obtenir les parcelles) le potentiel de constructibilité en utilisant seulement deux règles des PLU (lorsqu'elles étaient disponibles), la hauteur convertie en nombre de niveaux multipliée par le CES (coefficient d'emprise au sol) et la surface de la parcelle. Cette estimation de la constructibilité ne prend donc pas en compte les autres règles des PLU renseignées dans la base de données CartoPLU+2015.\n\nCe jeu de données concerne la Seine-Saint-Denis.",
+    "MotsClefs": "constructibilité ; parcelle ; PLU ; CES ; sol",
+    "Lien": "http://www.donnees.statistiques.developpement-durable.gouv.fr/hackurba/DRIEA_constructibilité_d93.zip",
+    "DisponibilitéDonnées": "oui",
+    "CGU": "Licence ouverte / Open Data Commons Open Database License (ODbL)",
+    "DocumentationTechnique": "",
+    "DocumentationMéthodologique": "",
+    "ExempleRéutilisation": "",
+    "ChampGéographique": "Département",
+    "Maille": "",
+    "NiveauRestitution": "",
+    "Format": "",
+    "NombreJeuxDonnées": 1,
+    "Millésimes": 2015
   }
 ]

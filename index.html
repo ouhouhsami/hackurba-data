@@ -35,6 +35,9 @@
             <i class="search icon"></i>
             <input type="text" id="searchbox" placeholder="Chercher&hellip;" fjs-search>
           </div>
+          <div class="ui container">
+            <div class="ui container"><a href="javascript:window.location.reload()">(supprimer les filtres)</a></div>
+          </div>
           <div class="ui container left aligned" id="target">Chargement...</div>
         </div>
       </div>
@@ -119,9 +122,9 @@
       <legend>Périmètre</legend>
       {{#Perimetre}}
       <div id="perimetre">
-        <div class="checkbox" fjs-criteria="field=Perimetre,ele=#groupes input:checkbox">
+        <div class="radio" fjs-criteria="field=Perimetre,ele=#groupes input:radio">
           <label>
-            <input type="checkbox" value="{{.}}">
+            <input type="radio" name="perimetre" value="{{.}}">
             <span>{{.}}</span>
           </label>
         </div>
@@ -135,9 +138,9 @@
       <legend>CGU</legend>
       {{#CGU}}{{#.}}
       <div id="cgu">
-        <div class="checkbox" fjs-criteria="field=CGU,ele=#cgus input:checkbox">
+        <div class="radio" fjs-criteria="field=CGU,ele=#cgus input:radio">
           <label>
-            <input type="checkbox" value="{{.}}">
+            <input type="radio" name="cgu" value="{{.}}">
             <span>{{.}}</span>
           </label>
         </div>
@@ -148,12 +151,12 @@
 
   <div class="well">
     <fieldset id="champGéographique_criteria">
-      <legend>Champ géographique</legend>
+      <legend>     géographique</legend>
       {{#ChampGéographique}}{{#.}}
       <div id="champGéographique">
-        <div class="checkbox" fjs-criteria="field=ChampGéographique,ele=#champGéographiques input:checkbox">
+        <div class="radio" fjs-criteria="field=ChampGéographique,ele=#champGéographiques input:radio">
           <label>
-            <input type="checkbox" value="{{.}}">
+            <input type="radio" name="geo" value="{{.}}">
             <span>{{.}}</span>
           </label>
         </div>
