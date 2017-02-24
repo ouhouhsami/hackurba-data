@@ -32,9 +32,9 @@ $(document).ready(function(){
     $('#mydata_count').text(result.length);
   });
 
-  FJS.addCriteria({field: 'Perimetre', ele: '#groupe_criteria input:checkbox'});
-  FJS.addCriteria({field: 'CGU', ele: '#cgu_criteria input:checkbox'});
-  FJS.addCriteria({field: 'ChampGéographique', ele: '#champGéographique_criteria input:checkbox'});
+  FJS.addCriteria({field: 'Perimetre', ele: '#groupe_criteria input:radio'});
+  FJS.addCriteria({field: 'CGU', ele: '#cgu_criteria input:radio'});
+  FJS.addCriteria({field: 'ChampGéographique', ele: '#champGéographique_criteria input:radio'});
   FJS.filter();
 
   window.FJS = FJS;

@@ -19,7 +19,7 @@
     <div class="row ui conteneurblue">
       <div class="two wide column"><img class="ui image" src="assets/img/logo_ministere.png" alt="Logo Ministère"></div>
       <div class="two wide column"><img class="ui image" src="assets/img/logo_gtv.png" alt="Logo GreenTech verte" height="75" width="75"></div>
-      <div class="eleven wide column titre centered">#HackUrba : Comment et où construire durablement ? <br /> Un événement #GreenTechverte</div>
+      <div class="eleven wide column titre centered"><div class="ui blue horizontal label massive">#HackUrba</div> Imaginer comment et où construire durablement ? <a class="ui animated fade green right floated button tiny" href="https://twitter.com/GreenTechverte?lang=fr" target="_blank" tabindex="0"><div class="visible content">#GreenTechverte</div><div class="hidden content">suivez-nous sur <i class="twitter icon"></i></div></div></a>
     </div>
     <div class="row container">
       <div class="four wide column center aligned">
@@ -30,10 +30,13 @@
             </div>
             <div class="label">jeux de données</div>
           </div>
-          <div class="ui container">+ d'infos sur : <a href="http://www.developpement-durable.gouv.fr/hackurba-comment-et-ou-construire-durablement">#HackUrba</a> | <a href="http://www.developpement-durable.gouv.fr/">MEEM</a> | <a href="http://logement.gouv.fr">MLHD</a></div>
+          <div class="ui container">+ d'infos sur : <a href="http://www.developpement-durable.gouv.fr/hackurba-comment-et-ou-construire-durablement">#HackUrba</a><br /> <a href="http://www.developpement-durable.gouv.fr/">#MEEM</a> <a href="http://logement.gouv.fr">#MLHD</a></div>
           <div class="ui container icon input">
             <i class="search icon"></i>
             <input type="text" id="searchbox" placeholder="Chercher&hellip;" fjs-search>
+          </div>
+          <div class="ui container">
+            <div class="ui container"><a href="javascript:window.location.reload()">(supprimer les filtres)</a></div>
           </div>
           <div class="ui container left aligned" id="target">Chargement...</div>
         </div>
@@ -54,12 +57,15 @@
   <script id="data-template" type="text/html">
     <div class="ui raised segment">
       <p class="ui blue ribbon label"><%= Acronyme %></p><%= Intitulé %>
+      <% if (DisponibilitéDonnées=='oui' && Lien.length > 0) { %>
+                <button class="ui right floated button mini"><a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download orange icon"></i>Télécharger</a></button>
+      <% } %>
       <p></p>
       <div class="ui two column grid">
         <div class="column"> 
           <div class="ui segments">
             <div class="ui segment">
-              <p>Proposé par : <%= Opérateur %></p>
+              <p>Producteur : <%= Opérateur %></p>
               <p>Périmètre : <%= Perimetre %></p>
               <p><div class="ui horizontal labels"> Thèmes :
                 <% var mywords=Theme.split(';') ; for (index=0;index<mywords.length;++index) { %>
@@ -78,10 +84,7 @@
         <div class="column">
           <div class="ui segments">
             <div class="ui segment">
-                <p>Disponibilité des données : <%= DisponibilitéDonnées %>
-                <% if (DisponibilitéDonnées=='oui' && Lien.length > 0) { %>
-                <a target="_blank" class="label label-success" href="<%= Lien %>"><i class="download orange icon"></i>Télécharger</a>
-                <% } %></p>
+                <p>Disponibilité des données : <%= DisponibilitéDonnées %></p>
                 <% if(NombreJeuxDonnées) { %><p>Nb de jeux : <%= NombreJeuxDonnées %></p><% } %>
                 <% if(Millésimes) { %><p>Années : <%= Millésimes %></p><% } %>
                 <p>Conditions d'usage : <%= CGU %></p>
@@ -99,7 +102,7 @@
           </div>
         </div>
         <div class="ui container">
-          <p><%= linkify(Commentaire)   %></p><br />
+          <p><%= linkify(Commentaire) %></p><br />
         </div>
       </div>
     </script>
@@ -119,9 +122,9 @@
       <legend>Périmètre</legend>
       {{#Perimetre}}
       <div id="perimetre">
-        <div class="checkbox" fjs-criteria="field=Perimetre,ele=#groupes input:checkbox">
+        <div class="radio" fjs-criteria="field=Perimetre,ele=#groupes input:radio">
           <label>
-            <input type="checkbox" value="{{.}}">
+            <input type="radio" name="perimetre" value="{{.}}">
             <span>{{.}}</span>
           </label>
         </div>
@@ -135,9 +138,9 @@
       <legend>CGU</legend>
       {{#CGU}}{{#.}}
       <div id="cgu">
-        <div class="checkbox" fjs-criteria="field=CGU,ele=#cgus input:checkbox">
+        <div class="radio" fjs-criteria="field=CGU,ele=#cgus input:radio">
           <label>
-            <input type="checkbox" value="{{.}}">
+            <input type="radio" name="cgu" value="{{.}}">
             <span>{{.}}</span>
           </label>
         </div>
@@ -148,12 +151,12 @@
 
   <div class="well">
     <fieldset id="champGéographique_criteria">
-      <legend>Champ géographique</legend>
+      <legend>Zone géographique</legend>
       {{#ChampGéographique}}{{#.}}
       <div id="champGéographique">
-        <div class="checkbox" fjs-criteria="field=ChampGéographique,ele=#champGéographiques input:checkbox">
+        <div class="radio" fjs-criteria="field=ChampGéographique,ele=#champGéographiques input:radio">
           <label>
-            <input type="checkbox" value="{{.}}">
+            <input type="radio" name="geo" value="{{.}}">
             <span>{{.}}</span>
           </label>
         </div>
