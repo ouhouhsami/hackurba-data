@@ -3,8 +3,12 @@
 cvstojson to generate json from cvs.
 
 # TODO
-- Affichage trié des items de listes pour filtrer les jeux de données
+(rien pour le moment !)
 
+
+24/02/2017
+- Affichage trié des items de listes pour filtrer les jeux de données
+- Mise à jour de l'inventaire
 
 23/02/2017
 - Amélioration visuelle de l'interface
