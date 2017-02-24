@@ -7,7 +7,8 @@ $(document).ready(function(){
 
   $.each(mydata, function (key, data) {
       $.each(filteringDataKeys, function(item, key){
-        filteringData[key].push(data[key])
+        filteringData[key].push(data[key]);
+        filteringData[key].sort();
       })
   })
 
@@ -15,9 +16,8 @@ $(document).ready(function(){
     filteringData[key] = filteringData[key].filter(function(itm,i,a){
         return i==a.indexOf(itm);
     });
+    filteringData[key].sort();
   })
-
-  //console.log(filteringData)
 
   var template = $('#template').html();
   Mustache.parse(template);   // optional, speeds up future uses
