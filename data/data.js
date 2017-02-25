@@ -1101,5 +1101,29 @@ var mydata = [{
     "Format": "JSON",
     "NombreJeuxDonnées": 1,
     "Millésimes": 2017
+  },
+  {
+    "#": 52,
+    "Perimetre": "Réglementaires",
+    "Nature": "Données de référence",
+    "Theme": "PLU",
+    "Acronyme": "SUDOCUH",
+    "Opérateur": "MLHD",
+    "Intitulé": "Suivi des documents d'urbanisme",
+    "Nouveaute": "oui",
+    "Commentaire": "Il s'agit d'un fichier de suivi des documents d'urbanisme, pour toutes les communes de France.\n\nPour chaque commune, cela décrit les procédures d'élaboration des documents d'urbanisme approuvées ou en cours.",
+    "MotsClefs": "PLU ; commune ; GPU ; urbanisme ; procédure",
+    "Lien": "",
+    "DisponibilitéDonnées": "oui, mis à disposition à la demande",
+    "CGU": "Licence ouverte / Open Data Commons Open Database License (ODbL)",
+    "DocumentationTechnique": "non",
+    "DocumentationMéthodologique": "non",
+    "ExempleRéutilisation": "",
+    "ChampGéographique": "France entière",
+    "Maille": "",
+    "NiveauRestitution": "détail",
+    "Format": "CSV",
+    "NombreJeuxDonnées": 1,
+    "Millésimes": 2017
   }
 ]
