@@ -1125,5 +1125,29 @@ var mydata = [{
     "Format": "CSV",
     "NombreJeuxDonnées": 1,
     "Millésimes": 2017
+  },
+  {
+    "#": 53,
+    "Perimetre": "Réglementaires",
+    "Nature": "Données de référence",
+    "Theme": "PLU",
+    "Acronyme": "GPU geek",
+    "Opérateur": "IGN",
+    "Intitulé": "GPU pour les développeurs",
+    "Nouveaute": "oui",
+    "Commentaire": "Il s'agit d'un ensemble d'API qui permettent d'accéder aux documents et informations géo proposés par le GéoPortail de l'urbanisme (GPU).",
+    "MotsClefs": "PLU ; commune ; GPU ; urbanisme ; procédure",
+    "Lien": "https://github.com/IGNF/geoportail-urbanisme-dev",
+    "DisponibilitéDonnées": "oui",
+    "CGU": "Licence ouverte / Open Data Commons Open Database License (ODbL)",
+    "DocumentationTechnique": "non",
+    "DocumentationMéthodologique": "non",
+    "ExempleRéutilisation": "",
+    "ChampGéographique": "France entière",
+    "Maille": "",
+    "NiveauRestitution": "détail",
+    "Format": "API",
+    "NombreJeuxDonnées": 1,
+    "Millésimes": 2017
   }
 ]
