@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var filteringData = {'Perimetre': [], 'ChampGéographique': [], 'CGU': []}
+  var filteringData = {'Perimetre': [], 'ChampGéographique': [], 'CGU': [], 'Nouveaute': []}
 
   filteringDataKeys = Object.keys( filteringData );
 
@@ -35,6 +35,7 @@ $(document).ready(function(){
   FJS.addCriteria({field: 'Perimetre', ele: '#groupe_criteria input:radio'});
   FJS.addCriteria({field: 'CGU', ele: '#cgu_criteria input:radio'});
   FJS.addCriteria({field: 'ChampGéographique', ele: '#champGéographique_criteria input:radio'});
+  FJS.addCriteria({field: 'Nouveaute', ele: '#new_criteria input:radio'});
   FJS.filter();
 
   window.FJS = FJS;
